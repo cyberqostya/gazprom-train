@@ -1,0 +1,18 @@
+.user {
+  color: var(--text-color);
+  cursor: pointer;
+}
+
+.user:hover {
+  background-color: var(--submain-color);
+}
+
+.user__data {
+  border: 1px solid var(--text-color);
+  padding: 9px 20px;
+  font-size: 14px;
+}
+
+@media (max-width: 840px) {
+  .user__data { font-size: 12px; }
+}

@@ -1,70 +1,32 @@
-# Getting Started with Create React App
+### Реализованы:
+1. Загрузка пользователей с https://api.randomuser.me исходя из введенного количества
+1. Вывод столбцов таблицы (реактивно): сразу рендерится при включеной галочке
+1. Сортировка по возрастанию и убыванию (клик на шапку таблицы) P.S. Сортировка по столбцу "№" умышленно не сделана, так как этот столбец служит для отображения порядковых номеров строк в таблице, а не id пользователя
+1. При клике на строку пользователя отобразится его карточка с данными о нем
+1. Приятный дизайн в цветах и шрифте (+мини-анимации), взятых с сайта ГАЗПРОМа
+1. Прелоадер при загрузке данных с сервера (виден, если указать большое количество пользователей)
+1. Обработан случай, когда убраны все солбцы
+1. Скроллбар в зависимости от ширины таблицы и ее вместимости в видимую часть пользовательского экрана
+1. Кнопка "Назад" в карточке пользователя
+1. В параметры по-умолчанию введены значения
+1. Использованы хуки React
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+### Описание
+1. Компонент _Filter_ - шапка таблицы. Реализует сортировку в зависимости от состояния (имя столбца и направления).
+1. Компонент _GetUsersForm_ - форма для сбора параметров запроса пользователей. 
+1. Компонент _TableUser_ - строка в таблице. В ней отображаются данные 1 пользователя и по ней осуществляется переход в карточку пользователя.
+1. Компонент _TableUsers_ - таблица пользователей. В зависимости от собранных параметров запроса в ней отобржаются пользователи / прелоадер / скроллбар.
+1. Компонент _UserProfile_ - карточка пользователя. В ней отображаются данные о пользователе, полученный из основного хранилища и найденные с помощью метода find по id пользователя.
+1. Компонент _GetUsersCheckbox_ - чекбоксы в форме запросов. UI компонент.
+1. Компонент _Header_ - шапка страниц. UI компонент.
+1. Компонент _Preloader_ - UI компонент.
+1. Компонент _pages/Main_ - основная страница приложения.
+1. Компонент _pages/User_ - страница карточки пользователя.
+1. Компанент _utils_ - вспомогательные данные. В данном случае для преобразования названий данных на русский язык.
 
-In the project directory, you can run:
 
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Улучшения:
+1. Столбцы в таблице расположены строго в определенном порядке (хардкод): можно улучшить если следить в какой последовательности пользователь включает отображение столбцов
+1. При большом объеме данных реактивное отображение столбцов будет скорее замедлять работу приложения: можно улучшить отображение только при нажатии на кнопку Загрузить пользователей
+1. Создать пагинацию или подгрузку пользователей частями при скролле до низа страницы

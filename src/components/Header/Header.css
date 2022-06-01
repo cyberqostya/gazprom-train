@@ -1,0 +1,15 @@
+.header {
+  color: var(--text-color);
+}
+
+.header__title {
+  margin-top: 20px;
+  text-transform: uppercase;
+  font-weight: 800;
+  line-height: 1;
+  text-align: center;
+}
+
+@media (max-width: 500px) {
+  .header__title { font-size: 20px; }
+}

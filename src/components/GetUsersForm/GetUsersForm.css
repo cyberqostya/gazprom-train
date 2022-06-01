@@ -1,0 +1,40 @@
+.get-users {
+  width: 100%;
+  max-width: 800px;
+  grid-gap: 20px;
+}
+
+.get-users__checkboxes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+}
+
+.get-users__label_num {
+  width: fit-content;
+}
+
+.get-users__input {
+  padding: 5px 15px;
+  border: none;
+  border-radius: 7px;
+  max-width: 90px;
+  color: var(--main-color);
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.get-users__button {
+  margin-top: 20px;
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  background-color: var(--submain-color);
+  color: var(--text-color);
+  padding: 7px 15px;
+  border-radius: 7px;
+  font-size: 16px;
+}
+
+@media (max-width: 500px) {
+  /* .get-users__checkboxes { grid-template-columns: 1fr; } */
+}

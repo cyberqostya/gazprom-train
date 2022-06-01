@@ -1,0 +1,35 @@
+.get-users__label {
+  display: flex;
+  font-size: 16px;
+  align-items: center;
+  column-gap: 10px;
+  cursor: pointer;
+  color: var(--text-color);
+  font-weight: 600;
+  padding: 9px 15px;
+}
+
+.get-users__label-container input[type="checkbox"] { display: none; }
+.get-users__label-container input[type="checkbox"]:checked ~ .get-users__label .get-users__checkbox::after {
+  transform: scale(1);
+}
+
+.get-users__checkbox {
+  width: 20px;
+  height: 20px;
+  background-color: var(--text-color);
+  border-radius: 5px;
+  position: relative;
+}
+.get-users__checkbox::after {
+  content: '';
+  width: 14px;
+  height: 14px;
+  border-radius: 5px;
+  background-color: var(--submain-color);
+  transition: transform .4s;
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  transform: scale(0);
+}

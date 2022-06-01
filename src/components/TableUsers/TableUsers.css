@@ -1,0 +1,29 @@
+.users { 
+  margin-top: 20px;
+  margin-bottom: 40px;
+  width: 100%; 
+  overflow-x: scroll;
+}
+.users::-webkit-scrollbar {
+  height: 0;
+}
+.users_scrolling::-webkit-scrollbar {
+  height: 4px;
+  background-color: var(--text-color);
+}
+.users_scrolling::-webkit-scrollbar-thumb {
+  background-color: var(--submain-color);
+}
+
+
+.users__table {
+  width: fit-content;
+  border-collapse: collapse;
+  margin: 0 auto 20px;
+}
+
+.users__untable {
+  text-align: center;
+  color: var(--text-color);
+  font-style: italic;
+}
